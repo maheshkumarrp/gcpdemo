@@ -5,11 +5,11 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/edureka-gcp-training-mahesh/mybuilder:latest', '.']
 
-images: ['gcr.io/edureka-gcp-training-mahesh/mybuilder:latest']
-
 - name: 'gcr.io/cloud-builders/kubectl'
   args:
   - 'set'
   - 'image'
   - 'deployment/my-deployment'
   - 'my-container=gcr.io/edureka-gcp-training-mahesh/mybuilder:latest'
+
+images: ['gcr.io/edureka-gcp-training-mahesh/mybuilder:latest']  
