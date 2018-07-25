@@ -11,9 +11,8 @@ steps:
   - 'image'
   - 'deployment/my-deployment'
   - 'my-container=gcr.io/edureka-gcp-training-mahesh/mybuilder:latest'
-
-images: ['gcr.io/edureka-gcp-training-mahesh/mybuilder:latest']
-  
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=asia-southeast1-a'
   - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-1'
+
+images: ['gcr.io/edureka-gcp-training-mahesh/mybuilder:latest']
