@@ -3,16 +3,16 @@ steps:
   args: ['clone', 'https://github.com/maheshkumarrp/gcpdemo.git']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/edureka-gcp-training-mahesh/mybuilder:latest', '.']
+  args: ['build', '-t', 'gcr.io/edureka-gcp-training-mahesh/mybuilder:v2.0', '.']
 
 - name: 'gcr.io/cloud-builders/kubectl'
   args:
   - 'set'
   - 'image'
   - 'deployment/my-deployment'
-  - 'mybuilder=gcr.io/edureka-gcp-training-mahesh/mybuilder:latest'
+  - 'mybuilder=gcr.io/edureka-gcp-training-mahesh/mybuilder:v2.0'
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=asia-southeast1-a'
   - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-1'
 
-images: ['gcr.io/edureka-gcp-training-mahesh/mybuilder:latest']
+images: ['gcr.io/edureka-gcp-training-mahesh/mybuilder:v2.0']
