@@ -9,7 +9,7 @@ steps:
   args:
   - 'set'
   - 'image'
-  - 'deployment/${DEPLOYMENT}'
+  - 'deployment/${DEPLOYMENTNAME}'
   - '${CONTAINERNAME}=gcr.io/${PROJECT}/${CONTAINERNAME}:${VERSION}'
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=asia-southeast1-a'
@@ -17,7 +17,7 @@ steps:
   
 substitutions:
     PROJECT: 'edureka-gcp-training-mahesh'
-    DEPLOYMENT: 'my-deployment'
+    DEPLOYMENTNAME: 'my-deployment'
     CONTAINERNAME: 'mybuilder'
     VERSION: 'v4.0'    
     
