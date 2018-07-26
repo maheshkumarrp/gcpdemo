@@ -16,10 +16,10 @@ steps:
   - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-1'
   
 substitutions:
-    PROJECT: edureka-gcp-training-mahesh
-    DEPLOYMENTNAME: my-deployment
-    CONTAINERNAME: mybuilder
-    VERSION: v4.0    
+    'PROJECT': 'edureka-gcp-training-mahesh'
+    'DEPLOYMENTNAME': 'my-deployment'
+    'CONTAINERNAME': 'mybuilder'
+    'VERSION': 'v4.0'    
     
 options:
     substitution_option: 'ALLOW_LOOSE'
