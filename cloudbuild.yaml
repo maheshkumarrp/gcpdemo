@@ -13,13 +13,13 @@ steps:
   - '${_CONTAINERNAME}=gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}'
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=asia-southeast1-a'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-1'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=edureka-k8s-cluster'
   
 substitutions:
     _PROJECT: edureka-gcp-training-mahesh
-    _DEPLOYMENTNAME: my-deployment
-    _CONTAINERNAME: mybuilder
-    _VERSION: v6.0    
+    _DEPLOYMENTNAME: mycloudbuildemo
+    _CONTAINERNAME: cloudbuilddemo
+    _VERSION: v2.0    
     
 options:
     substitution_option: 'ALLOW_LOOSE'
